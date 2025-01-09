@@ -1,0 +1,108 @@
+/* Estilos para el componente Vision */
+
+.vision {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  .vision-header {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    background-color: #003366;
+    padding: 20px 0;
+  }
+  
+  .vision-logo {
+    position: relative;
+    height: 100px;
+    margin-bottom: -50px;
+    z-index: 2;
+  }
+  
+  .vision-header-bg {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0.8;
+  }
+  
+  .vision-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .vision-title {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .vision-title h2 {
+    background-color: #c30000;
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .vision-text-image {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  
+  .vision-text {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+  }
+  
+  .vision-image-container {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .vision-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .vision-text-image {
+      flex-direction: column;
+    }
+  
+    .vision-text {
+      text-align: center;
+    }
+  
+    .vision-image {
+      max-width: 300px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .vision-title h2 {
+      font-size: 20px;
+      padding: 8px 16px;
+    }
+  
+    .vision-text {
+      font-size: 14px;
+    }
+  }
+  
