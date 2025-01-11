@@ -1,5 +1,6 @@
     import React from 'react';
     import '../styles/Vision.css';
+    import logo from '../assets/logo.png';
 
     function Vision() {
     return (
@@ -7,7 +8,7 @@
         {/* Sección superior con logo e imagen de fondo */}
         <div className="vision-header">
             <img
-            src="https://via.placeholder.com/150"
+            src={logo}
             alt="Logo Innova"
             className="vision-logo"
             />

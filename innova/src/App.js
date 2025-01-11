@@ -2,6 +2,7 @@
     import Home from './components/Home';
     import Vision from './components/Vision';
     import Values from './components/Values';
+    import Header from './components/Header';
     import './App.css';
 
     function App() {
@@ -10,6 +11,7 @@
         <Home />
         <Vision />
         <Values />
+        <Header />
         </div>
     );
     }

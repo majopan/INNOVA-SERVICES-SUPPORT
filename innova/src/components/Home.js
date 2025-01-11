@@ -1,7 +1,7 @@
     import React from 'react';
     import '../styles/Home.css';
     import logo from '../assets/logo.png';
-    import principal from '../assets/portada.png';
+
 
     function Home() {
     return (
@@ -10,11 +10,10 @@
         <div className="header">
             <div className="header-content">
             <img
-            src={logo}
-            alt="Logo Innova"
-            className="logo"
+                src={logo}
+                alt="Logo Innova"
+                className="logo"
             />
-
             <div className="header-text">
                 <h1>Innova Services Support</h1>
                 <h2>Trained people, guaranteed results!</h2>
@@ -23,7 +22,7 @@
             <div className="background-image">
             {/* Imagen de fondo */}
             <img
-                src={principal}
+                src="https://via.placeholder.com/800x400"
                 alt="Ciudad nocturna"
                 className="city-image"
             />
