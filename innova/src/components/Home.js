@@ -8,7 +8,7 @@
         <div className="header">
             <div className="header-content">
             <img
-                src="https://via.placeholder.com/150"
+                src="../assets/logo.png"
                 alt="Logo Innova"
                 className="logo"
             />
