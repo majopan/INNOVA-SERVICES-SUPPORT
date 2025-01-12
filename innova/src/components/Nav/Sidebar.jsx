@@ -116,7 +116,8 @@ const Wrapper = styled.nav`
   padding: 0 30px;
   right: ${(props) => (props.sidebarOpen ? "0px" : "-400px")};
   z-index: 9999;
-  @media (max-width: 400px) {
+  transition: right 0.3s ease;
+  @media (max-width: 768px) {
     width: 100%;
   }
 `;
