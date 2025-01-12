@@ -7,9 +7,15 @@ import Services from "../components/Sections/Services";
 import Blog from "../components/Sections/People";
 import Pricing from "../components/Sections/why";
 import Contact from "../components/Sections/Contact";
-import Footer from "../components/Sections/Footer"
+import Footer from "../components/Sections/Footer";
+// Botón flotante
+import FloatingButton from "../components/Elements/FloatingButton"; // Ajusta la ruta si es necesario
 
 export default function Landing() {
+  const handleFloatingButtonClick = () => {
+    console.log("Botón flotante presionado");
+  };
+
   return (
     <>
       <TopNavbar />
@@ -20,8 +26,9 @@ export default function Landing() {
       <Pricing />
       <Contact />
       <Footer />
+
+      {/* Botón flotante */}
+      <FloatingButton onClick={handleFloatingButtonClick} />
     </>
   );
 }
-
-
