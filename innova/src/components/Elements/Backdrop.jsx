@@ -12,5 +12,8 @@ const Wrapper = styled.div`
   top: 0;
   left: 0;
   z-index: 99;
-  opacity: 0.8;
+  background: rgba(0, 0, 0, 0.5); /* Oscurecer con transparencia */
+  opacity: 1; /* Asegurarte de que no esté invisible */
 `;
+
+

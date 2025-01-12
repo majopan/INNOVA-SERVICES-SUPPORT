@@ -114,9 +114,9 @@ const Wrapper = styled.nav`
   position: fixed;
   top: 0;
   padding: 0 30px;
-  right: ${(props) => (props.sidebarOpen ? "0px" : "-400px")};
+  right: ${(props) => (props.sidebarOpen ? "0px" : "-700px")};
   z-index: 9999;
-  transition: right 0.3s ease;
+  transition: right 0.3s ease-in-out;
   @media (max-width: 768px) {
     width: 100%;
   }
