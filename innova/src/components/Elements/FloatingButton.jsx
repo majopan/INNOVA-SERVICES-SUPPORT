@@ -1,56 +1,63 @@
-    import React from 'react';
-    import workImage from '../../assets/svg/work.svg'; // Ajusta la ruta según tu estructura de carpetas
+import React, { useState } from 'react';
+import '../../style/buton.css'; // Archivo CSS para los estilos
+import workImage from '../../assets/svg/work.svg'; // Ajusta la ruta según tu estructura de carpetas
 
-    const FloatingButton = ({ onClick }) => {
-    const buttonStyle = {
-        position: 'fixed',
-        bottom: '20px',
-        right: '20px',
-        width: '90px',
-        height: '90px',
-        borderRadius: '50%',
-        backgroundColor: '#fff',
-        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        cursor: 'pointer',
-        zIndex: 1000,
-        transition: 'transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out',
-    };
+const FloatingButton = ({ onClick }) => (
+    <div className="floating-button" onClick={onClick}>
+        <img src={workImage} alt="Work" className="floating-button-image" />
+    </div>
+);
 
-    const imageStyle = {
-        width: '100%',
-        height: 'auto',
-        objectFit: 'contain',
-    };
+const Modal = ({ isOpen, onClose }) => {
+    if (!isOpen) return null;
 
-    const hoverStyle = {
-        transform: 'scale(1.1)',
-        boxShadow: '0 6px 10px rgba(0, 0, 0, 0.15)',
-    };
+    return (
+        <div className="modal-overlay" onClick={onClose}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                <button className="modal-close-button" onClick={onClose}>
+                    &times;
+                </button>
+                <h2 className="modal-title">Formulario de Contacto</h2>
+                <form className="modal-form">
+                    <div className="form-group">
+                        <label htmlFor="name">Nombre:</label>
+                        <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="email">Correo:</label>
+                        <input type="email" id="email" name="email" placeholder="Ingresa tu correo" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="message">Mensaje:</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="4"
+                            placeholder="Escribe tu mensaje"
+                        ></textarea>
+                    </div>
+                    <button type="submit" className="submit-button">
+                        Enviar
+                    </button>
+                </form>
+            </div>
+        </div>
+    );
+};
 
-    const handleMouseOver = (e) => {
-        Object.assign(e.currentTarget.style, hoverStyle);
-    };
+const App = () => {
+    const [isModalOpen, setModalOpen] = useState(false);
 
-    const handleMouseOut = (e) => {
-        Object.assign(e.currentTarget.style, {
-        transform: 'scale(1)',
-        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-        });
+    const toggleModal = () => {
+        setModalOpen(!isModalOpen);
     };
 
     return (
-        <div
-        style={buttonStyle}
-        onClick={onClick}
-        onMouseOver={handleMouseOver}
-        onMouseOut={handleMouseOut}
-        >
-        <img src={workImage} alt="Work" style={imageStyle} />
-        </div>
+        <>
+            <FloatingButton onClick={toggleModal} />
+            <Modal isOpen={isModalOpen} onClose={toggleModal} />
+        </>
     );
-    };
+};
 
-    export default FloatingButton;
+export default App;
