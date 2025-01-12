@@ -38,9 +38,9 @@ export default function Contact() {
                 </ContactImgBox>
               </div>
               <div style={{ width: "50%" }}>
-                <div style={{ marginTop: "100px" }}>
-                  <img src={ContactImg3} alt="office" className="radius6 zz" />
-                </div>
+                <ContactImgBox className="contactImg3Wrapper">
+                  <img src={ContactImg3} alt="office" className="radius6 contactImg3" />
+                </ContactImgBox>
               </div>
             </ImagesWrapper>
           </div>
@@ -100,9 +100,19 @@ const ButtonInput = styled.input`
 `;
 
 const ContactImgBox = styled.div`
-  max-width: 180px; 
-  align-self: flex-end; 
+  max-width: 180px;
+  align-self: flex-end;
   margin: 10px 30px 10px 0;
+
+  &.contactImg3Wrapper {
+    margin-top: 100px;
+
+    @media (max-width: 768px) {
+      margin: 20px auto 0 auto; /* Centra la imagen 3 en pantallas pequeñas */
+      display: flex;
+      justify-content: center;
+    }
+  }
 `;
 
 const SumbitWrapper = styled.div`
