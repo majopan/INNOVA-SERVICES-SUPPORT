@@ -201,30 +201,15 @@
         height: auto;
         border-radius: 15px;
         padding: 20px;
-        min-height: auto;
     }
 
-    .form-containerr {
-        position: static;
+    .form-containerr, .welcome-back-containerr {
         width: 100%;
         height: auto;
-        transform: none !important;
-        opacity: 1 !important;
+        padding: 20px;
     }
 
-    .toggle-containerr {
-        display: none;
-    }
-
-    .sign-in {
-        left: 0;
-        width: 100%;
-        opacity: 1;
-        z-index: 5;
-    }
-
-    input {
+    .form-containerr input {
         width: 90%;
     }
 }
-

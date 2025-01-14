@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import "../../style/Login.css";
 
 const Login = () => {
-  const [isActive, setIsActive] = useState(false);
-
-  const handleLoginClick = () => {
-    setIsActive(false);
-  };
+  const [isActive] = useState(false);
 
   return (
     <div className="login-containerr">
@@ -23,15 +19,8 @@ const Login = () => {
         </div>
         <div className="toggle-containerr">
           <div className="toggle">
-            <div className="toggle-panel toggle-left">
-              <h1>Welcome Back!</h1>
-              <p>Enter your personal details to use all of the site's features</p>
-              <button className="hidden" id="login" onClick={handleLoginClick}>
-                Sign In
-              </button>
-            </div>
             <div className="toggle-panel toggle-right">
-              <h1>Hello, Friend!</h1>
+              <h1>Welcome Back!</h1>
               <p>Log in with your personal details to use all the features of the site</p>
             </div>
           </div>
