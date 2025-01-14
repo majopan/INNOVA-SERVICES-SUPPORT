@@ -68,9 +68,59 @@
 }
 
 /* Estilos para el formulario */
+/* Estilos para el modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px; /* Aumenta el ancho máximo del modal */
+    max-height: 90vh; /* Limita la altura máxima para evitar desbordamientos */
+    overflow-y: auto; /* Habilita el scroll en caso de contenido extenso */
+    position: relative;
+}
+
+.modal-close-button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.modal-title {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilos para el formulario dentro del modal */
+.modal-body {
+    max-height: calc(90vh - 100px); /* Ajusta la altura del contenido del modal */
+    overflow-y: auto; /* Agrega scroll interno si el contenido excede */
+}
+
 .modal-form {
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
 .form-group {
