@@ -198,7 +198,9 @@
     .containerr {
         flex-direction: column;
         width: 100%;
+        height: auto;
         border-radius: 15px;
+        padding: 20px;
         min-height: auto;
     }
 
@@ -221,11 +223,8 @@
         z-index: 5;
     }
 
-    .sign-up {
-        display: none;
-    }
-
     input {
         width: 90%;
     }
 }
+
